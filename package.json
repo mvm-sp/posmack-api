@@ -1,0 +1,48 @@
+{
+  "name": "posmack-api",
+  "version": "1.0.0",
+  "description": "api example to test database operations",
+  "main": "index.js",
+  "scripts": {
+    "start-dev": "nodemon index.js",
+    "migrate": "npx sequelize-cli db:migrate",
+    "migrate:reset": "npx sequelize-cli db:migrate:undo:all && npm run migrate",
+    "test": "cross-env NODE_ENV=test jest --detectOpenHandles --testTimeout=10000",
+    "pretest": "cross-env NODE_ENV=test npm run migrate:reset"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvm-sp/posmack-api.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "sequelize",
+    "mysql",
+    "rest",
+    "api"
+  ],
+  "author": "mvm-sp",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/mvm-sp/posmack-api/issues"
+  },
+  "homepage": "https://github.com/mvm-sp/posmack-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "jest": "^29.7.0",
+    "mysql2": "^3.9.3",
+    "sequelize": "^6.37.2",
+    "supertest": "^6.3.4"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}
