@@ -1,21 +1,14 @@
 const request = require('supertest')
 const app =require('../server')
 
-beforeAll(() => {
-  server = app.listen(8082); // Random number is needed to avoid using same port in different tests if you run in parallel
-})
-
-afterAll(() => {
-  server.close()
-})
+/*
+afterAll(async () => {
+  await app.db.close();
+});
+*/
 
 describe('Post Tutorial', () => {
-
-  afterAll(() => {
-    server.close()
-  })
-
-  it('should create a new post', async () => {
+  test('Tutorial POST', async () => {
     const res = await request(app)
       .post('/api/tutorials')
       .send({
@@ -27,12 +20,12 @@ describe('Post Tutorial', () => {
   })
 })
 
-/*
+
 describe('Gett All Tutorial', () => {
-  it('should create a new post', async () => {
+  test('should create a new post', async () => {
     const res = await request(app)
       .get('/api/tutorials')
       .send()
     expect(res.statusCode).toEqual(200)
   })
-})*/
+})

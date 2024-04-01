@@ -1,7 +1,7 @@
 module.exports = {
     HOST: "localhost",
-    USER: "<some-data>",
-    PASSWORD: "<some-data>",
+    USER: "<some>",
+    PASSWORD: "<some>",
     DB: "posmack",
     dialect: "mysql",
     pool: {

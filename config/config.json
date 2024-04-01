@@ -1,21 +1,21 @@
 {
   "development": {
-    "username": "<some-data>",
-    "password": "<some-data>",
+    "username": "<some>",
+    "password": "<some>",
     "database": "posmack",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
-    "username": "<some-data>",
-    "password": "<some-data>",
+    "username": "<some>",
+    "password": "<some>",
     "database": "posmack",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "<some-data>",
-    "password": "<some-data>",
+    "username": "<some>",
+    "password": "<some>",
     "database": "posmack",
     "host": "127.0.0.1",
     "dialect": "mysql"
