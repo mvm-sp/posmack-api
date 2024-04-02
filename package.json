@@ -4,6 +4,8 @@
   "description": "api example to test database operations",
   "main": "index.js",
   "scripts": {
+    "dev": "set NODE_ENV=development&& node server.js",
+    "local": "set NODE_ENV=local&& node server.js",
     "start-dev": "nodemon index.js",
     "migrate": "npx sequelize-cli db:migrate",
     "migrate:reset": "npx sequelize-cli db:migrate:undo:all && npm run migrate",
@@ -31,6 +33,7 @@
   "homepage": "https://github.com/mvm-sp/posmack-api#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "jest": "^29.7.0",
     "mysql2": "^3.9.3",
